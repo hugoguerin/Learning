@@ -1,17 +1,23 @@
-const premier = document.getElementById("premier");
-const salut = document.getElementById("salut");
+const myButton = document.getElementById("premier");
+const myInput = document.getElementById("salut");
+const myList = document.getElementById("liste");
 
 const onClick = () => {
-    alert("okok");
+
+    const li = document.createElement("li");
+    li.innerHTML = myInput.value;
+    myList.appendChild(li);
+    //Attacher le li au ul
+
 };
 
-premier.addEventListener("click", onClick);
-
-
-
+myButton.addEventListener("click", onClick);
 
 const onChange = () => {
     console.log("okok");
 };
 
-salut.addEventListener("input", onChange);
+myInput.addEventListener("input", onChange);
+
+
+
